@@ -140,7 +140,7 @@ return $.widget( "ui.controlgroup", {
 					}
 					element[ widget ]( instanceOptions );
 
-					// Store an instance of the controlgroup to be able to reference
+					// StoreRequest an instance of the controlgroup to be able to reference
 					// from the outermost element for changing options and refresh
 					var widgetElement = element[ widget ]( "widget" );
 					$.data( widgetElement[ 0 ], "ui-controlgroup-data",

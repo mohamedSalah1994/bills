@@ -5625,7 +5625,7 @@ function defaultDisplay( nodeName ) {
 			iframe.detach();
 		}
 
-		// Store the correct default display
+		// StoreRequest the correct default display
 		elemdisplay[ nodeName ] = display;
 	}
 
@@ -6610,7 +6610,7 @@ function defaultPrefilter( elem, props, opts ) {
 			dataShow = dataPriv.access( elem, "fxshow", {} );
 		}
 
-		// Store state if its toggle - enables .stop().toggle() to "reverse"
+		// StoreRequest state if its toggle - enables .stop().toggle() to "reverse"
 		if ( toggle ) {
 			dataShow.hidden = !hidden;
 		}
@@ -7487,7 +7487,7 @@ jQuery.fn.extend( {
 				className = getClass( this );
 				if ( className ) {
 
-					// Store className if set
+					// StoreRequest className if set
 					dataPriv.set( this, "__className__", className );
 				}
 

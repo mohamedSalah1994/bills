@@ -23371,7 +23371,7 @@ listProto.initData = function (data, nameList, dimValueGetter) {
         // only gives the 'y' value. 'x' value is the indices of cateogry
         // Use a tempValue to normalize the value to be a (x, y) value
 
-        // Store the data by dimensions
+        // StoreRequest the data by dimensions
         for (var k = 0; k < dimensions.length; k++) {
             var dim = dimensions[k];
             var dimStorage = storage[dim];
@@ -74188,7 +74188,7 @@ GradientManager.prototype.updateDom = function (gradient, dom) {
         dom.appendChild(stop);
     }
 
-    // Store dom element in gradient, to avoid creating multiple
+    // StoreRequest dom element in gradient, to avoid creating multiple
     // dom instances for the same gradient element
     gradient._dom = dom;
 };
@@ -74312,7 +74312,7 @@ ClippathManager.prototype.updateDom = function (
              * transform, which is done by multiplying parent's inverse
              * transform.
              */
-            // Store old transform
+            // StoreRequest old transform
             var transform = Array.prototype.slice.call(
                 clipPath.transform
             );
