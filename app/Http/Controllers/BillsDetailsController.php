@@ -2,8 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\sections\StoreRequest;
+use App\Models\Bill;
+use App\Models\Bills_attachments;
 use App\Models\Bills_details;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+
 
 class BillsDetailsController extends Controller
 {
@@ -55,9 +60,13 @@ class BillsDetailsController extends Controller
      * @param  \App\Models\Bills_details  $bills_details
      * @return \Illuminate\Http\Response
      */
-    public function edit(Bills_details $bills_details)
+    public function edit($id)
     {
-        //
+        $bills = Bill::where('id',$id)->first();
+        $details  = Bills_details::where('id_bill',$id)->get();
+        $attachments  = Bills_attachments::where('bill_id',$id)->get();
+
+        return view('bills.details',compact('bills','details','attachments'));
     }
 
     /**
@@ -78,8 +87,25 @@ class BillsDetailsController extends Controller
      * @param  \App\Models\Bills_details  $bills_details
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Bills_details $bills_details)
+    public function destroy(Request $request)
     {
-        //
+        $bills = Bills_attachments::findOrFail($request->id_file);
+        $bills->delete();
+        Storage::disk('public_uploads')->delete($request->bill_number.'/'.$request->file_name);
+        session()->flash('delete','تم حذف الفاتوره بنجاح');
+        return back();
     }
+
+    public function open_file($bill_number,$file_name)
+
+    {
+        $files = Storage::disk('public_uploads')->getDriver()->getAdapter()->applyPathPrefix($bill_number.'/'.$file_name);
+        return response()->file($files);
+    }
+
+    public function get_file($bill_number , $file_name){
+        $files = Storage::disk('public_uploads')->getDriver()->getAdapter()->applyPathPrefix($bill_number .'/'. $file_name);
+        return response()->download($files);
+
+}
 }

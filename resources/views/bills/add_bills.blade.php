@@ -9,7 +9,7 @@ Explore
 @mohamedSalah1994
 Samir-Gamal
 /
-Invoices_Project
+bills_Project
 2
 1518
 Code
@@ -20,7 +20,7 @@ Projects
 Wiki
 Security
 Insights
-Invoices_Project/resources/views/invoices/add_invoice.blade.php
+bills_Project/resources/views/bills/add_bill.blade.php
 @Samir-Gamal
 Samir-Gamal first commit
 Latest commit 3ed3b4a on Oct 11, 2020

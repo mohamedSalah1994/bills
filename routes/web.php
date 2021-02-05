@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\billsController;
+use App\Http\Controllers\BillsDetailsController;
 use App\Http\Controllers\SectionController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UsersController;
@@ -31,6 +32,12 @@ Route::resource('sections' , SectionController::class);
 Route::resource('products' , ProductController::class);
 Route::resource('users' , UsersController::class);
 Route::get('/section/{id}' , [billsController::class , 'getproducts']);
+Route::get('/billDetails/{id}' , [BillsDetailsController::class , 'edit']);
+Route::get('view_file/{bill_number}/{file_name}' , [BillsDetailsController::class , 'open_file']);
+Route::get('download/{bill_number}/{file_name}' , [BillsDetailsController::class , 'get_file']);
+Route::post('delete_file' , [BillsDetailsController::class , 'destroy'])->name('delete_file');
+
+
 //Route::get('/{page}', [AdminController::class ,'index']);
 
 

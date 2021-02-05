@@ -50,24 +50,45 @@
                                                 <th class="border-bottom-0">الاجمالى</th>
                                                 <th class="border-bottom-0">الحاله</th>
                                                 <th class="border-bottom-0">ملاحظات</th>
+                                                <th class="border-bottom-0">العمليات</th>
                                             </tr>
                                             </thead>
                                             <tbody>
+                                                @php
+                                                $i = 0;
+                                                @endphp
+                                                @foreach ($bills as $bill)
+                                                    @php
+                                                    $i++
+                                                    @endphp
                                             <tr>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
+                                                <td>{{ $i }}</td>
+                                                <td>{{ $bill->bill_number }} </td>
+                                                <td>{{ $bill->bill_Date }}</td>
+                                                <td>{{ $bill->Due_date }}</td>
+                                                <td>{{ $bill->product }}</td>
+                                                <td><a
+                                                        href="{{ url('billDetails') }}/{{ $bill->id }}">{{ $bill->section->section_name }}</a>
+                                                </td>
+                                                <td>{{ $bill->Discount }}</td>
+                                                <td>{{ $bill->Rate_VAT }}</td>
+                                                <td>{{ $bill->Value_VAT }}</td>
+                                                <td>{{ $bill->Total }}</td>
+                                                <td>
+                                                    @if ($bill->Value_Status == 1)
+                                                        <span class="text-success">{{ $bill->Status }}</span>
+                                                    @elseif($bill->Value_Status == 2)
+                                                        <span class="text-danger">{{ $bill->Status }}</span>
+                                                    @else
+                                                        <span class="text-warning">{{ $bill->Status }}</span>
+                                                    @endif
+        
+                                                </td>
+        
+                                                <td>{{ $bill->note }}</td>
 
                                             </tr>
+                                            @endforeach
 
 
 

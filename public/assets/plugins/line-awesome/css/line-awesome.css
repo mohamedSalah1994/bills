@@ -1565,10 +1565,10 @@ readers do not read off random characters that represent icons */
 .la-file-import:before {
   content: "\f56f"; }
 
-.la-file-invoice:before {
+.la-file-bill:before {
   content: "\f570"; }
 
-.la-file-invoice-dollar:before {
+.la-file-bill-dollar:before {
   content: "\f571"; }
 
 .la-file-medical:before {

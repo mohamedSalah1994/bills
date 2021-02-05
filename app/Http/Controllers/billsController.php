@@ -21,8 +21,8 @@ class billsController extends Controller
      */
     public function index()
     {
-
-        return view('bills.bills');
+        $bills = Bill::all();
+        return view('bills.bills' , compact('bills'));
     }
 
     /**

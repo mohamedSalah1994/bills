@@ -1,6 +1,6 @@
-/* ###### 7.5 Invoice  ###### */
+/* ###### 7.5 bill  ###### */
 
-.main-content-left-invoice {
+.main-content-left-bill {
   display: block;
   padding: 0;
 
@@ -10,26 +10,26 @@
 }
 
 @media (max-width: 991.98px) {
-  .main-content-left-invoice {
+  .main-content-left-bill {
     width: 100%;
   }
 }
 
 @media (min-width: 992px) {
-  .main-content-left-invoice {
+  .main-content-left-bill {
     border-right: 1px solid $border;
   }
 }
 
 @media (min-width: 992px) {
-  .main-content-left-invoice {
+  .main-content-left-bill {
     .main-content-breadcrumb, .main-content-title {
       padding-left: 0;
     }
   }
 }
 
-.main-invoice-list {
+.main-bill-list {
   position: relative;
   border-top: 1px solid $border;
 
@@ -111,32 +111,32 @@
     }
   }
 }
-.card-invoice hr{
+.card-bill hr{
 	border-top:0 !important;
 }
 @media (min-width: 992px) {
-  .main-invoice-list {
+  .main-bill-list {
     height: calc(100% - 65px);
   }
 }
 
 @media (min-width: 992px) {
-  .main-invoice-list .media {
+  .main-bill-list .media {
     padding: 10px 15px;
   }
 }
 
-.main-content-body-invoice {
+.main-content-body-bill {
   position: relative;
 }
 
 @media (min-width: 992px) {
-  .main-content-body-invoice {
+  .main-content-body-bill {
     display: block;
   }
 }
 
-.card-invoice {
+.card-bill {
   background-color: transparent;
   border-width: 0;
 
@@ -146,14 +146,14 @@
 }
 
 @media (min-width: 768px) {
-  .invoice-header {
+  .bill-header {
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
   }
 }
 
-.invoice-title {
+.bill-title {
   margin-bottom: 0;
   text-transform: uppercase;
   color: $gray-300;
@@ -195,14 +195,14 @@
   }
 }
 
-.invoice-info-row {
+.bill-info-row {
   display: flex;
   justify-content: space-between;
   padding: 5px 0;
   margin-bottom: 0;
   font-size: 13px;
 
-  + .invoice-info-row {
+  + .bill-info-row {
     border-top: 1px dotted $gray-300;
   }
 
@@ -211,7 +211,7 @@
   }
 }
 
-.table-invoice {
+.table-bill {
   thead > tr > {
     th, td {
       font-size: 11px;
@@ -226,15 +226,15 @@
       font-weight: 500;
     }
 
-    th:first-child .invoice-notes, td:first-child .invoice-notes {
+    th:first-child .bill-notes, td:first-child .bill-notes {
       margin-right: 20px;
     }
 
-    th:first-child .invoice-notes .section-label-sm, td:first-child .invoice-notes .section-label-sm {
+    th:first-child .bill-notes .section-label-sm, td:first-child .bill-notes .section-label-sm {
       font-weight: 600;
     }
 
-    th:first-child .invoice-notes p, td:first-child .invoice-notes p {
+    th:first-child .bill-notes p, td:first-child .bill-notes p {
       font-size: 13px;
       font-weight: 400;
       color: $default-color;

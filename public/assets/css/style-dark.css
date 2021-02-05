@@ -9,7 +9,7 @@
 Project        :   Rapo - HTML5 Bootstrap Admin Template
 Version        :   V.1
 Create Date    :   05/02/20
-Copyright      :   Spruko Technologies Private Limited 
+Copyright      :   Spruko Technologies Private Limited
 Author         :   SprukoSoft
 Author URL     :   https://themeforest.net/user/sprukosoft
 Support	       :   support@spruko.com
@@ -57,7 +57,7 @@ License        :   Licensed under ThemeForest License
 	** TEXT SIZES & FONTS
 	** CUSTOM CSS
 
-	
+
 /*---FONTS IMPORT --- */
 body.dark-theme {
   color: #fff;
@@ -1195,31 +1195,31 @@ body.dark-theme {
 .dark-theme .billed-from h6 {
   color: #f4f5f8; }
 
-.dark-theme .invoice-title {
+.dark-theme .bill-title {
   color: #e1e1e1; }
 
-.dark-theme .main-invoice-list .media-body h6 {
+.dark-theme .main-bill-list .media-body h6 {
   color: #fff; }
 
-.dark-theme .main-invoice-list .selected {
+.dark-theme .main-bill-list .selected {
   background-color: rgba(244, 245, 248, 0.1);
   border-top-color: 1px dotted rgba(226, 232, 245, 0.1);
   border-bottom-color: rgba(226, 232, 245, 0.1);
   border-left-color: #0162e8; }
 
-.dark-theme .main-invoice-list .media {
+.dark-theme .main-bill-list .media {
   border: 1px dotted rgba(226, 232, 245, 0.1); }
-  .dark-theme .main-invoice-list .media + .media::before {
+  .dark-theme .main-bill-list .media + .media::before {
     border-top: 1px dotted transparent; }
-  .dark-theme .main-invoice-list .media:hover, .dark-theme .main-invoice-list .media:focus {
+  .dark-theme .main-bill-list .media:hover, .dark-theme .main-bill-list .media:focus {
     background-color: rgba(244, 245, 248, 0.1); }
 
-.dark-theme .main-invoice-list .media-body p {
+.dark-theme .main-bill-list .media-body p {
   color: #9da5b5; }
-  .dark-theme .main-invoice-list .media-body p span {
+  .dark-theme .main-bill-list .media-body p span {
     color: #cbcfd8; }
 
-.dark-theme .table-invoice tbody > tr > th:first-child .invoice-notes p {
+.dark-theme .table-bill tbody > tr > th:first-child .bill-notes p {
   color: rgba(255, 255, 255, 0.6); }
 
 @media (max-width: 767px) {
@@ -1231,28 +1231,28 @@ body.dark-theme {
   .dark-theme .wizard.vertical > .content, .dark-theme .wizard.vertical > .actions {
     border-left: 1px solid rgba(226, 232, 245, 0.1); } }
 
-.table-invoice tbody > tr > td:first-child .invoice-notes p {
+.table-bill tbody > tr > td:first-child .bill-notes p {
   color: rgba(255, 255, 255, 0.6); }
 
-.dark-theme .table-invoice tbody > tr > th:first-child, .dark-theme .table-invoice tbody > tr > td:first-child {
+.dark-theme .table-bill tbody > tr > th:first-child, .dark-theme .table-bill tbody > tr > td:first-child {
   color: rgba(255, 255, 255, 0.6); }
 
 .dark-theme .billed-from p, .dark-theme .billed-to p {
   color: rgba(255, 255, 255, 0.5); }
 
-.dark-theme .card-invoice .tx-gray-600 {
+.dark-theme .card-bill .tx-gray-600 {
   color: #eef0f3; }
 
 .dark-theme .billed-to h6 {
   color: #d3d8e2; }
 
-.dark-theme .invoice-info-row + .invoice-info-row {
+.dark-theme .bill-info-row + .bill-info-row {
   border-top: 1px dotted rgba(226, 232, 245, 0.15); }
 
-.dark-theme .invoice-info-row span:first-child {
+.dark-theme .bill-info-row span:first-child {
   color: rgba(255, 255, 255, 0.3); }
 
-.dark-theme .main-invoice-list {
+.dark-theme .main-bill-list {
   border-top: 1px solid rgba(226, 232, 245, 0.1); }
 
 .dark-theme .card-category {

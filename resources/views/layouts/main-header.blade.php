@@ -210,7 +210,7 @@
                                 @foreach (auth()->user()->unreadNotifications as $notification)
                                     <div class="main-notification-list Notification-scroll">
                                         <a class="d-flex p-3 border-bottom"
-                                           href="{{ url('InvoicesDetails') }}/{{ $notification->data['id'] }}">
+                                           href="{{ url('billsDetails') }}/{{ $notification->data['id'] }}">
                                             <div class="notifyimg bg-pink">
                                                 <i class="la la-file-alt text-white"></i>
                                             </div>
