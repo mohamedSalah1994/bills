@@ -114,7 +114,9 @@ class billsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $bills = Bill::where('id', $id)->first();
+        $sections = Section::all();
+        return view('bills.edit_bills', compact('sections', 'bills'));
     }
 
     /**
@@ -124,9 +126,27 @@ class billsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+
+        $bills = Bill::findOrFail($request->bill_id);
+        $bills->update([
+            'bill_number' => $request->bill_number,
+            'bill_Date' => $request->bill_Date,
+            'Due_date' => $request->Due_date,
+            'product' => $request->product,
+            'section_id' => $request->Section,
+            'Amount_collection' => $request->Amount_collection,
+            'Amount_Commission' => $request->Amount_Commission,
+            'Discount' => $request->Discount,
+            'Value_VAT' => $request->Value_VAT,
+            'Rate_VAT' => $request->Rate_VAT,
+            'Total' => $request->Total,
+            'note' => $request->note,
+        ]);
+
+        session()->flash('edit', 'تم تعديل الفاتورة بنجاح');
+        return back();
     }
 
     /**

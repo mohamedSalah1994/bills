@@ -1,33 +1,3 @@
-Skip to content
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
-
-@mohamedSalah1994
-Samir-Gamal
-/
-bills_Project
-2
-1518
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-bills_Project/resources/views/bills/details_bill.blade.php
-@Samir-Gamal
-Samir-Gamal first commit
-Latest commit 1fad960 on Nov 2, 2020
- History
- 1 contributor
-375 lines (331 sloc)  22.4 KB
-
 @extends('layouts.master')
 @section('css')
     <!---Internal  Prism css-->
@@ -232,7 +202,7 @@ Latest commit 1fad960 on Nov 2, 2020
                                         <div class="tab-pane" id="tab6">
                                             <!--المرفقات-->
                                             <div class="card card-statistics">
-                                                @can('اضافة مرفق')
+
                                                     <div class="card-body">
                                                         <p class="text-danger">* صيغة المرفق pdf, jpeg ,.jpg , png </p>
                                                         <h5 class="card-title">اضافة مرفقات</h5>
@@ -253,7 +223,7 @@ Latest commit 1fad960 on Nov 2, 2020
                                                                 name="uploadedFile">تاكيد</button>
                                                         </form>
                                                     </div>
-                                                @endcan
+
                                                 <br>
 
                                                 <div class="table-responsive mt-15">
@@ -280,7 +250,7 @@ Latest commit 1fad960 on Nov 2, 2020
                                                                     <td colspan="2">
 
                                                                         <a class="btn btn-outline-success btn-sm"
-                                                                            href="{{ url('View_file') }}/{{ $bills->bill_number }}/{{ $attachment->file_name }}"
+                                                                            href="{{ url('view_file') }}/{{ $bills->bill_number }}/{{ $attachment->file_name }}"
                                                                             role="button"><i class="fas fa-eye"></i>&nbsp;
                                                                             عرض</a>
 
@@ -297,7 +267,7 @@ Latest commit 1fad960 on Nov 2, 2020
                                                                                 data-bill_number="{{ $attachment->bill_number }}"
                                                                                 data-id_file="{{ $attachment->id }}"
                                                                                 data-target="#delete_file">حذف</button>
-                                                                        
+
 
                                                                     </td>
                                                                 </tr>
@@ -400,4 +370,3 @@ Latest commit 1fad960 on Nov 2, 2020
     </script>
 
 @endsection
-
