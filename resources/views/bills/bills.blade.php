@@ -115,7 +115,7 @@
                                         <td>{{ $bill->Due_date }}</td>
                                         <td>{{ $bill->product }}</td>
                                         <td><a
-                                                href="{{ url('billsDetails') }}/{{ $bill->id }}">{{ $bill->section->section_name }}</a>
+                                                href="{{ route('billDetails',['id' => $bill->id]) }}">{{ $bill->section->section_name }}</a>
                                         </td>
                                         <td>{{ $bill->Discount }}</td>
                                         <td>{{ $bill->Rate_VAT }}</td>
@@ -143,23 +143,23 @@
                                                         <a class="dropdown-item"
                                                             href=" {{ url('edit_bill') }}/{{ $bill->id }}">تعديل
                                                             الفاتورة</a>
-                                                  
 
-                                                    @can('حذف الفاتورة')
+
+
                                                         <a class="dropdown-item" href="#" data-bill_id="{{ $bill->id }}"
                                                             data-toggle="modal" data-target="#delete_bill"><i
                                                                 class="text-danger fas fa-trash-alt"></i>&nbsp;&nbsp;حذف
                                                             الفاتورة</a>
-                                                    @endcan
 
-                                                    @can('تغير حالة الدفع')
+
+
                                                         <a class="dropdown-item"
                                                             href="{{ URL::route('Status_show', [$bill->id]) }}"><i
                                                                 class=" text-success fas
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     fa-money-bill"></i>&nbsp;&nbsp;تغير
                                                             حالة
                                                             الدفع</a>
-                                                    @endcan
+
 
                                                     @can('ارشفة الفاتورة')
                                                         <a class="dropdown-item" href="#" data-bill_id="{{ $bill->id }}"

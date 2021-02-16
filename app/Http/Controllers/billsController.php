@@ -10,6 +10,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class billsController extends Controller
 {
@@ -103,7 +104,8 @@ class billsController extends Controller
      */
     public function show($id)
     {
-        //
+        $bills = Bill::where('id', $id)->first();
+        return view('bills.status_update', compact('bills'));
     }
 
     /**
@@ -155,13 +157,69 @@ class billsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+        $id = $request->bill_id;
+        $bills = Bill::where('id',$id)->first();
+        $details = Bills_attachments::where('bill_id' , $id)->first();
+        if(!empty($details->bill_number)){
+            Storage::disk('public_uploads')->deleteDirectory($details->bill_number);
+        }
+        $bills->forceDelete();
+        session()->flash('delete_bill');
+        return back();
+
     }
     public function getproducts($id)
     {
        $products = DB::table('products')->where('section_id' , $id)->pluck('product_name' , 'id');
        return json_encode($products);
+    }
+    public function Status_Update($id, Request $request)
+    {
+        $bills = Bill::findOrFail($id);
+
+        if ($request->Status === 'مدفوعة') {
+
+            $bills->update([
+                'Value_Status' => 1,
+                'Status' => $request->Status,
+                'Payment_Date' => $request->Payment_Date,
+            ]);
+
+            Bills_details::create([
+                'id_Bill' => $request->bill_id,
+                'bill_number' => $request->bill_number,
+                'product' => $request->product,
+                'Section' => $request->Section,
+                'Status' => $request->Status,
+                'Value_Status' => 1,
+                'note' => $request->note,
+                'Payment_Date' => $request->Payment_Date,
+                'user' => (Auth::user()->name),
+            ]);
+        }
+
+        else {
+            $bills->update([
+                'Value_Status' => 3,
+                'Status' => $request->Status,
+                'Payment_Date' => $request->Payment_Date,
+            ]);
+            Bills_details::create([
+                'id_Bill' => $request->bill_id,
+                'bill_number' => $request->bill_number,
+                'product' => $request->product,
+                'Section' => $request->Section,
+                'Status' => $request->Status,
+                'Value_Status' => 3,
+                'note' => $request->note,
+                'Payment_Date' => $request->Payment_Date,
+                'user' => (Auth::user()->name),
+            ]);
+        }
+        session()->flash('Status_Update');
+        return redirect('/bills');
+
     }
 }

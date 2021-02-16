@@ -1,32 +1,4 @@
-Skip to content
-Search or jump to…
 
-Pull requests
-Issues
-Marketplace
-Explore
-
-@mohamedSalah1994
-Samir-Gamal
-/
-bills_Project
-2
-1518
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-bills_Project/resources/views/bills/add_bill.blade.php
-@Samir-Gamal
-Samir-Gamal first commit
-Latest commit 3ed3b4a on Oct 11, 2020
- History
- 1 contributor
-278 lines (225 sloc)  12.4 KB
 
 @extends('layouts.master')
 @section('css')
@@ -50,7 +22,7 @@ Latest commit 3ed3b4a on Oct 11, 2020
     <div class="breadcrumb-header justify-content-between">
         <div class="my-auto">
             <div class="d-flex">
-                <h4 class="content-title mb-0 my-auto">الفواتير</h4><span class="text-muted mt-1 tx-13 mr-2 mb-0">/
+                <a href="{{ route('bills.index') }}"><h4 class="content-title mb-0 my-auto">الفواتير</h4></a><span class="text-muted mt-1 tx-13 mr-2 mb-0">/
                     اضافة فاتورة</span>
             </div>
         </div>

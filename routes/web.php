@@ -25,7 +25,7 @@ Route::get('/', function () {
     return view('auth.login');
 });
 Auth::routes();
-Auth::routes(['register' => false]);
+// Auth::routes(['register' => false]);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 // ------------------------------------------------------------------------------------------------------
 Route::resource('bills' , billsController::class);
@@ -37,12 +37,14 @@ Route::resource('billAttachments' , BillsAttachmentsController::class);
 Route::get('/section/{id}' , [billsController::class , 'getproducts']);
 Route::get('/edit_bill/{id}' , [billsController::class , 'edit']);
 // ------------------------------------------------------------------------------------------------------
-Route::get('/billDetails/{id}' , [BillsDetailsController::class , 'edit']);
+Route::get('/billsDetails/{id}' , [BillsDetailsController::class , 'edit'])->name('billDetails');
 Route::get('view_file/{bill_number}/{file_name}' , [BillsDetailsController::class , 'open_file']);
 Route::get('download/{bill_number}/{file_name}' , [BillsDetailsController::class , 'get_file']);
 Route::post('delete_file' , [BillsDetailsController::class , 'destroy'])->name('delete_file');
 // ------------------------------------------------------------------------------------------------------
-
+Route::get('/Status_show/{id}' , [billsController::class , 'show'])->name('Status_show');
+Route::post('/Status_Update/{id}' , [billsController::class , 'Status_Update'])->name('Status_Update');
+// ------------------------------------------------------------------------------------------------------
 
 //Route::get('/{page}', [AdminController::class ,'index']);
 
