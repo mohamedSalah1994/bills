@@ -8,7 +8,9 @@ use App\Http\Controllers\billsController;
 use App\Http\Controllers\BillsDetailsController;
 use App\Http\Controllers\SectionController;
 use App\Http\Controllers\ProductController;
-use App\Http\Controllers\UsersController;
+// use App\Http\Controllers\UsersController;
+use App\Http\Controllers\UserManagement\RoleController;
+use App\Http\Controllers\UserManagement\UserController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -28,11 +30,15 @@ Route::get('/', function () {
 Auth::routes();
 // Auth::routes(['register' => false]);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::group(['middleware' => ['auth']], function() {
+    Route::resource('roles',RoleController::class);
+    Route::resource('users',UserController::class);
+    });
 // ------------------------------------------------------------------------------------------------------
 Route::resource('bills' , billsController::class);
 Route::resource('sections' , SectionController::class);
 Route::resource('products' , ProductController::class);
-Route::resource('users' , UsersController::class);
+
 Route::resource('billAttachments' , BillsAttachmentsController::class);
 Route::resource('Archive' , ArchivesController::class);
 // ------------------------------------------------------------------------------------------------------

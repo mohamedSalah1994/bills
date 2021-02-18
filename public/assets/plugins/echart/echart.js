@@ -11224,8 +11224,8 @@ function quantityExponent(val) {
 }
 
 /**
- * find a “nice” number approximately equal to x. Round the number if round = true,
- * take ceiling if round = false. The primary observation is that the “nicest”
+ * find a "nice" number approximately equal to x. Round the number if round = true,
+ * take ceiling if round = false. The primary observation is that the "nicest"
  * numbers in decimal are 1, 2, and 5, and all power-of-ten multiples of these numbers.
  *
  * See "Nice Numbers for Graph Labels" of Graphic Gems.
@@ -37794,7 +37794,7 @@ function nextLeft(node) {
 }
 
 /**
- * If nodeInLeft’s ancestor is a sibling of node, returns nodeInLeft’s ancestor.
+ * If nodeInLeft's ancestor is a sibling of node, returns nodeInLeft's ancestor.
  * Otherwise, returns the specified ancestor.
  * @param  {module:echarts/data/Tree~TreeNode} nodeInLeft
  * @param  {module:echarts/data/Tree~TreeNode} node

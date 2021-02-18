@@ -629,7 +629,7 @@ define(["./raphael.core"], function(R) {
          **
          * Gives you a reference to the DOM object, so you can assign event handlers or just mess around.
          **
-         * Note: Don’t mess with it.
+         * Note: Don't mess with it.
          > Usage
          | // draw a circle at coordinate 10,10 with radius of 10
          | var c = paper.circle(10, 10, 10);
@@ -675,7 +675,7 @@ define(["./raphael.core"], function(R) {
          * Element.paper
          [ property (object) ]
          **
-         * Internal reference to “paper” where object drawn. Mainly for use in plugins and element extensions.
+         * Internal reference to "paper" where object drawn. Mainly for use in plugins and element extensions.
          > Usage
          | Raphael.el.cross = function () {
          |     this.attr({fill: "red"});
@@ -740,7 +740,7 @@ define(["./raphael.core"], function(R) {
      - deg (number) angle in degrees
      - cx (number) #optional x coordinate of the centre of rotation
      - cy (number) #optional y coordinate of the centre of rotation
-     * If cx & cy aren’t specified centre of the shape is used as a point of rotation.
+     * If cx & cy aren't specified centre of the shape is used as a point of rotation.
      = (object) @Element
     \*/
     elproto.rotate = function (deg, cx, cy) {
@@ -774,7 +774,7 @@ define(["./raphael.core"], function(R) {
      - sy (number) vertical scale amount
      - cx (number) #optional x coordinate of the centre of scale
      - cy (number) #optional y coordinate of the centre of scale
-     * If cx & cy aren’t specified centre of the shape is used instead.
+     * If cx & cy aren't specified centre of the shape is used instead.
      = (object) @Element
     \*/
     elproto.scale = function (sx, sy, cx, cy) {
@@ -827,16 +827,16 @@ define(["./raphael.core"], function(R) {
      [ method ]
      **
      * Adds transformation to the element which is separate to other attributes,
-     * i.e. translation doesn’t change `x` or `y` of the rectange. The format
+     * i.e. translation doesn't change `x` or `y` of the rectange. The format
      * of transformation string is similar to the path string syntax:
      | "t100,100r30,100,100s2,2,100,100r45s1.5"
      * Each letter is a command. There are four commands: `t` is for translate, `r` is for rotate, `s` is for
      * scale and `m` is for matrix.
      *
-     * There are also alternative “absolute” translation, rotation and scale: `T`, `R` and `S`. They will not take previous transformation into account. For example, `...T100,0` will always move element 100 px horisontally, while `...t100,0` could move it vertically if there is `r90` before. Just compare results of `r90t100,0` and `r90T100,0`.
+     * There are also alternative "absolute" translation, rotation and scale: `T`, `R` and `S`. They will not take previous transformation into account. For example, `...T100,0` will always move element 100 px horisontally, while `...t100,0` could move it vertically if there is `r90` before. Just compare results of `r90t100,0` and `r90T100,0`.
      *
-     * So, the example line above could be read like “translate by 100, 100; rotate 30° around 100, 100; scale twice around 100, 100;
-     * rotate 45° around centre; scale 1.5 times relative to centre”. As you can see rotate and scale commands have origin
+     * So, the example line above could be read like "translate by 100, 100; rotate 30° around 100, 100; scale twice around 100, 100;
+     * rotate 45° around centre; scale 1.5 times relative to centre". As you can see rotate and scale commands have origin
      * coordinates as optional parameters, the default is the centre point of the element.
      * Matrix accepts six parameters.
      > Usage
@@ -854,7 +854,7 @@ define(["./raphael.core"], function(R) {
      | console.log(el.transform());
      > Parameters
      - tstr (string) #optional transformation string
-     * If tstr isn’t specified
+     * If tstr isn't specified
      = (string) current transformation string
      * else
      = (object) @Element
@@ -972,12 +972,12 @@ define(["./raphael.core"], function(R) {
      **
      * Sets the attributes of the element.
      > Parameters
-     - attrName (string) attribute’s name
+     - attrName (string) attribute's name
      - value (string) value
      * or
      - params (object) object of name/value pairs
      * or
-     - attrName (string) attribute’s name
+     - attrName (string) attribute's name
      * or
      - attrNames (array) in this case method returns array of current values for given attribute names
      = (object) @Element if attrsName & value or params are passed in.
@@ -1006,45 +1006,45 @@ define(["./raphael.core"], function(R) {
      o ry (number) vertical radius of the ellipse
      o src (string) image URL, only works for @Element.image element
      o stroke (string) stroke colour
-     o stroke-dasharray (string) [“”, “none”, “`-`”, “`.`”, “`-.`”, “`-..`”, “`. `”, “`- `”, “`--`”, “`- .`”, “`--.`”, “`--..`”]
-     o stroke-linecap (string) [“`butt`”, “`square`”, “`round`”]
-     o stroke-linejoin (string) [“`bevel`”, “`round`”, “`miter`”]
+     o stroke-dasharray (string) ["", "none", "`-`", "`.`", "`-.`", "`-..`", "`. `", "`- `", "`--`", "`- .`", "`--.`", "`--..`"]
+     o stroke-linecap (string) ["`butt`", "`square`", "`round`"]
+     o stroke-linejoin (string) ["`bevel`", "`round`", "`miter`"]
      o stroke-miterlimit (number)
      o stroke-opacity (number)
      o stroke-width (number) stroke width in pixels, default is '1'
      o target (string) used with href
      o text (string) contents of the text element. Use `\n` for multiline text
-     o text-anchor (string) [“`start`”, “`middle`”, “`end`”], default is “`middle`”
+     o text-anchor (string) ["`start`", "`middle`", "`end`"], default is "`middle`"
      o title (string) will create tooltip with a given text
      o transform (string) see @Element.transform
      o width (number)
      o x (number)
      o y (number)
      > Gradients
-     * Linear gradient format: “`‹angle›-‹colour›[-‹colour›[:‹offset›]]*-‹colour›`”, example: “`90-#fff-#000`” – 90°
-     * gradient from white to black or “`0-#fff-#f00:20-#000`” – 0° gradient from white via red (at 20%) to black.
+     * Linear gradient format: "`‹angle›-‹colour›[-‹colour›[:‹offset›]]*-‹colour›`", example: "`90-#fff-#000`" – 90°
+     * gradient from white to black or "`0-#fff-#f00:20-#000`" – 0° gradient from white via red (at 20%) to black.
      *
-     * radial gradient: “`r[(‹fx›, ‹fy›)]‹colour›[-‹colour›[:‹offset›]]*-‹colour›`”, example: “`r#fff-#000`” –
-     * gradient from white to black or “`r(0.25, 0.75)#fff-#000`” – gradient from white to black with focus point
+     * radial gradient: "`r[(‹fx›, ‹fy›)]‹colour›[-‹colour›[:‹offset›]]*-‹colour›`", example: "`r#fff-#000`" –
+     * gradient from white to black or "`r(0.25, 0.75)#fff-#000`" – gradient from white to black with focus point
      * at 0.25, 0.75. Focus point coordinates are in 0..1 range. Radial gradients can only be applied to circles and ellipses.
      > Path String
-     # <p>Please refer to <a href="http://www.w3.org/TR/SVG/paths.html#PathData" title="Details of a path’s data attribute’s format are described in the SVG specification.">SVG documentation regarding path string</a>. Raphaël fully supports it.</p>
+     # <p>Please refer to <a href="http://www.w3.org/TR/SVG/paths.html#PathData" title="Details of a path's data attribute's format are described in the SVG specification.">SVG documentation regarding path string</a>. Raphaël fully supports it.</p>
      > Colour Parsing
      # <ul>
-     #     <li>Colour name (“<code>red</code>”, “<code>green</code>”, “<code>cornflowerblue</code>”, etc)</li>
-     #     <li>#••• — shortened HTML colour: (“<code>#000</code>”, “<code>#fc0</code>”, etc)</li>
-     #     <li>#•••••• — full length HTML colour: (“<code>#000000</code>”, “<code>#bd2300</code>”)</li>
-     #     <li>rgb(•••, •••, •••) — red, green and blue channels’ values: (“<code>rgb(200,&nbsp;100,&nbsp;0)</code>”)</li>
-     #     <li>rgb(•••%, •••%, •••%) — same as above, but in %: (“<code>rgb(100%,&nbsp;175%,&nbsp;0%)</code>”)</li>
-     #     <li>rgba(•••, •••, •••, •••) — red, green and blue channels’ values: (“<code>rgba(200,&nbsp;100,&nbsp;0, .5)</code>”)</li>
-     #     <li>rgba(•••%, •••%, •••%, •••%) — same as above, but in %: (“<code>rgba(100%,&nbsp;175%,&nbsp;0%, 50%)</code>”)</li>
-     #     <li>hsb(•••, •••, •••) — hue, saturation and brightness values: (“<code>hsb(0.5,&nbsp;0.25,&nbsp;1)</code>”)</li>
+     #     <li>Colour name ("<code>red</code>", "<code>green</code>", "<code>cornflowerblue</code>", etc)</li>
+     #     <li>#••• — shortened HTML colour: ("<code>#000</code>", "<code>#fc0</code>", etc)</li>
+     #     <li>#•••••• — full length HTML colour: ("<code>#000000</code>", "<code>#bd2300</code>")</li>
+     #     <li>rgb(•••, •••, •••) — red, green and blue channels' values: ("<code>rgb(200,&nbsp;100,&nbsp;0)</code>")</li>
+     #     <li>rgb(•••%, •••%, •••%) — same as above, but in %: ("<code>rgb(100%,&nbsp;175%,&nbsp;0%)</code>")</li>
+     #     <li>rgba(•••, •••, •••, •••) — red, green and blue channels' values: ("<code>rgba(200,&nbsp;100,&nbsp;0, .5)</code>")</li>
+     #     <li>rgba(•••%, •••%, •••%, •••%) — same as above, but in %: ("<code>rgba(100%,&nbsp;175%,&nbsp;0%, 50%)</code>")</li>
+     #     <li>hsb(•••, •••, •••) — hue, saturation and brightness values: ("<code>hsb(0.5,&nbsp;0.25,&nbsp;1)</code>")</li>
      #     <li>hsb(•••%, •••%, •••%) — same as above, but in %</li>
      #     <li>hsba(•••, •••, •••, •••) — same as above, but with opacity</li>
      #     <li>hsl(•••, •••, •••) — almost the same as hsb, see <a href="http://en.wikipedia.org/wiki/HSL_and_HSV" title="HSL and HSV - Wikipedia, the free encyclopedia">Wikipedia page</a></li>
      #     <li>hsl(•••%, •••%, •••%) — same as above, but in %</li>
      #     <li>hsla(•••, •••, •••, •••) — same as above, but with opacity</li>
-     #     <li>Optionally for hsb and hsl you could specify hue as a degree: “<code>hsl(240deg,&nbsp;1,&nbsp;.5)</code>” or, if you want to go fancy, “<code>hsl(240°,&nbsp;1,&nbsp;.5)</code>”</li>
+     #     <li>Optionally for hsb and hsl you could specify hue as a degree: "<code>hsl(240deg,&nbsp;1,&nbsp;.5)</code>" or, if you want to go fancy, "<code>hsl(240°,&nbsp;1,&nbsp;.5)</code>"</li>
      # </ul>
     \*/
     elproto.attr = function (name, value) {
@@ -1111,7 +1111,7 @@ define(["./raphael.core"], function(R) {
      * Element.toFront
      [ method ]
      **
-     * Moves the element so it is the closest to the viewer’s eyes, on top of other elements.
+     * Moves the element so it is the closest to the viewer's eyes, on top of other elements.
      = (object) @Element
     \*/
     elproto.toFront = function () {
@@ -1128,7 +1128,7 @@ define(["./raphael.core"], function(R) {
      * Element.toBack
      [ method ]
      **
-     * Moves the element so it is the furthest from the viewer’s eyes, behind other elements.
+     * Moves the element so it is the furthest from the viewer's eyes, behind other elements.
      = (object) @Element
     \*/
     elproto.toBack = function () {
