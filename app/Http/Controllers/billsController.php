@@ -2,15 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\BillsExport;
 use App\Models\Bill;
 use App\Models\Bills_attachments;
 use App\Models\Bills_details;
 use App\Models\Section;
 use App\Models\User;
+use App\Notifications\BillPaid;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Storage;
+use Maatwebsite\Excel\Facades\Excel;
 
 class billsController extends Controller
 {
@@ -90,8 +94,12 @@ class billsController extends Controller
             // move pic
             $imageName = $request->pic->getClientOriginalName();
             $request->pic->move(public_path('Attachments/' . $bill_number), $imageName);
-        }
 
+
+        }
+        // send mail
+        $user = User::first();
+        Notification::send($user, new BillPaid($bill_id));
         session()->flash('Add', 'تم اضافة الفاتورة بنجاح');
         return back();
     }
@@ -162,12 +170,28 @@ class billsController extends Controller
         $id = $request->bill_id;
         $bills = Bill::where('id',$id)->first();
         $details = Bills_attachments::where('bill_id' , $id)->first();
-        if(!empty($details->bill_number)){
+        $id_page =$request->id_page;
+
+
+        if (!$id_page==2) {
+
+        if (!empty($details->bill_number)) {
+
             Storage::disk('public_uploads')->deleteDirectory($details->bill_number);
         }
+
         $bills->forceDelete();
         session()->flash('delete_bill');
-        return back();
+        return redirect('/bills');
+
+        }
+
+        else {
+
+            $bills->delete();
+            session()->flash('archive_bill');
+            return redirect('/Archive');
+        }
 
     }
     public function getproducts($id)
@@ -221,5 +245,27 @@ class billsController extends Controller
         session()->flash('Status_Update');
         return redirect('/bills');
 
+    }
+    public function paid_bills(){
+        $bills = Bill::where('value_status' , 1)->get();
+        return view('bills.paid_bills' , compact('bills'));
+    }
+    public function unpaid_bills(){
+        $bills = Bill::where('value_status' , 1)->get();
+        return view('bills.unpaid_bills' , compact('bills'));
+    }
+    public function partial_bills(){
+        $bills = Bill::where('value_status' , 1)->get();
+        return view('bills.partial_bills' , compact('bills'));
+    }
+    public function Print_bill($id)
+    {
+        $bills = Bill::where('id', $id)->first();
+        return view('bills.print_bills',compact('bills'));
+    }
+    public function export()
+    {
+
+        return Excel::download(new BillsExport, 'bills.xlsx');
     }
 }

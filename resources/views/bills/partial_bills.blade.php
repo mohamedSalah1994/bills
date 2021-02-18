@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('title')
-    قائمة الفواتير
-@endsection
+     الفواتير المدفوعه جزئيا
+@stop
 @section('css')
     <!-- Internal Data table css -->
     <link href="{{ URL::asset('assets/plugins/datatable/css/dataTables.bootstrap4.min.css') }}" rel="stylesheet" />
@@ -18,8 +18,8 @@
     <div class="breadcrumb-header justify-content-between">
         <div class="my-auto">
             <div class="d-flex">
-                <h4 class="content-title mb-0 my-auto">الفواتير</h4><span class="text-muted mt-1 tx-13 mr-2 mb-0">/ قائمة
-                    الفواتير</span>
+                <a href="{{ route('bills.index') }}"><h4 class="content-title mb-0 my-auto">الفواتير</h4></a><span class="text-muted mt-1 tx-13 mr-2 mb-0">/الفواتير المدفوعه جزئيا
+                </span>
             </div>
         </div>
 
@@ -70,14 +70,14 @@
             <div class="card mg-b-20">
                 <div class="card-header pb-0">
 
-                        <a href="{{ route('bills.create') }}" class="modal-effect btn btn-sm btn-primary" style="color:white"><i
+                        <a href="bills/create" class="modal-effect btn btn-sm btn-primary" style="color:white"><i
                                 class="fas fa-plus"></i>&nbsp; اضافة فاتورة</a>
 
 
-
-                        <a class="modal-effect btn btn-sm btn-primary" href="{{ route('export_bills') }}"
+                    {{-- @can('تصدير EXCEL')
+                        <a class="modal-effect btn btn-sm btn-primary" href="{{ url('export_bills') }}"
                             style="color:white"><i class="fas fa-file-download"></i>&nbsp;تصدير اكسيل</a>
-
+                    @endcan --}}
 
                 </div>
                 <div class="card-body">
@@ -161,19 +161,19 @@
                                                             الدفع</a>
 
 
-
+                                                    @can('ارشفة الفاتورة')
                                                         <a class="dropdown-item" href="#" data-bill_id="{{ $bill->id }}"
                                                             data-toggle="modal" data-target="#Transfer_bill"><i
                                                                 class="text-warning fas fa-exchange-alt"></i>&nbsp;&nbsp;نقل الي
                                                             الارشيف</a>
+                                                    @endcan
 
-
-
-                                                        <a class="dropdown-item" href="{{route('print_bills' , [$bill->id])  }}"><i
+                                                    @can('طباعةالفاتورة')
+                                                        <a class="dropdown-item" href="Print_bill/{{ $bill->id }}"><i
                                                                 class="text-success fas fa-print"></i>&nbsp;&nbsp;طباعة
                                                             الفاتورة
                                                         </a>
-
+                                                    @endcan
                                                 </div>
                                             </div>
 
@@ -295,11 +295,4 @@
             modal.find('.modal-body #bill_id').val(bill_id);
         })
     </script>
-
-
-
-
-
-
-
 @endsection
