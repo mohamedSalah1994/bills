@@ -8,7 +8,6 @@ use App\Http\Controllers\billsController;
 use App\Http\Controllers\BillsDetailsController;
 use App\Http\Controllers\SectionController;
 use App\Http\Controllers\ProductController;
-// use App\Http\Controllers\UsersController;
 use App\Http\Controllers\UserManagement\RoleController;
 use App\Http\Controllers\UserManagement\UserController;
 use Illuminate\Support\Facades\Auth;
@@ -38,7 +37,6 @@ Route::group(['middleware' => ['auth']], function() {
 Route::resource('bills' , billsController::class);
 Route::resource('sections' , SectionController::class);
 Route::resource('products' , ProductController::class);
-
 Route::resource('billAttachments' , BillsAttachmentsController::class);
 Route::resource('Archive' , ArchivesController::class);
 // ------------------------------------------------------------------------------------------------------
@@ -57,7 +55,6 @@ Route::get('/unpaid_bills', [billsController::class , 'unpaid_bills'])->name('un
 Route::get('/partial_bills', [billsController::class , 'partial_bills'])->name('partial_bills');
 Route::get('/print_bills/{id}', [billsController::class , 'print_bill'])->name('print_bills');
 // ------------------------------------------------------------------------------------------------------
-
 Route::get('export_bills', [billsController::class , 'export'])->name('export_bills');
 // ------------------------------------------------------------------------------------------------------
 

@@ -69,16 +69,14 @@
         <div class="col-xl-12">
             <div class="card mg-b-20">
                 <div class="card-header pb-0">
-
+                    @can('اضافة فاتورة')
                         <a href="{{ route('bills.create') }}" class="modal-effect btn btn-sm btn-primary" style="color:white"><i
                                 class="fas fa-plus"></i>&nbsp; اضافة فاتورة</a>
-
-
-
+                    @endcan
+                    @can('تصدير EXCEL')
                         <a class="modal-effect btn btn-sm btn-primary" href="{{ route('export_bills') }}"
                             style="color:white"><i class="fas fa-file-download"></i>&nbsp;تصدير اكسيل</a>
-
-
+                    @endcan
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -139,41 +137,29 @@
                                                     class="btn ripple btn-primary btn-sm" data-toggle="dropdown"
                                                     type="button">العمليات<i class="fas fa-caret-down ml-1"></i></button>
                                                 <div class="dropdown-menu tx-13">
-
+                                                    @can('تعديل الفاتورة')
                                                         <a class="dropdown-item"
-                                                            href=" {{ url('edit_bill') }}/{{ $bill->id }}">تعديل
-                                                            الفاتورة</a>
-
-
-
+                                                            href=" {{ url('edit_bill') }}/{{ $bill->id }}">تعديل الفاتورة</a>
+                                                    @endcan
+                                                    @can('حذف الفاتورة')
                                                         <a class="dropdown-item" href="#" data-bill_id="{{ $bill->id }}"
                                                             data-toggle="modal" data-target="#delete_bill"><i
-                                                                class="text-danger fas fa-trash-alt"></i>&nbsp;&nbsp;حذف
-                                                            الفاتورة</a>
-
-
-
+                                                                class="text-danger fas fa-trash-alt"></i>&nbsp;&nbsp;حذف الفاتورة</a>
+                                                    @endcan
+                                                    @can('تغير حالة الدفع')
                                                         <a class="dropdown-item"
                                                             href="{{ URL::route('Status_show', [$bill->id]) }}"><i
-                                                                class=" text-success fas
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    fa-money-bill"></i>&nbsp;&nbsp;تغير
-                                                            حالة
-                                                            الدفع</a>
-
-
-
+                                                                class=" text-success fasfa-money-bill"></i>&nbsp;&nbsp;تغير حالةالدفع</a>
+                                                    @endcan
+                                                    @can('ارشفة الفاتورة')
                                                         <a class="dropdown-item" href="#" data-bill_id="{{ $bill->id }}"
-                                                            data-toggle="modal" data-target="#Transfer_bill"><i
-                                                                class="text-warning fas fa-exchange-alt"></i>&nbsp;&nbsp;نقل الي
-                                                            الارشيف</a>
-
-
-
+                                                            data-toggle="modal" data-target="#Transfer_bill">
+                                                            <i class="text-warning fas fa-exchange-alt"></i>&nbsp;&nbsp;نقل الي الارشيف</a>
+                                                    @endcan
+                                                    @can('طباعةالفاتورة')
                                                         <a class="dropdown-item" href="{{route('print_bills' , [$bill->id])  }}"><i
-                                                                class="text-success fas fa-print"></i>&nbsp;&nbsp;طباعة
-                                                            الفاتورة
-                                                        </a>
-
+                                                                class="text-success fas fa-print"></i>&nbsp;&nbsp;طباعة الفاتورة </a>
+                                                    @endcan
                                                 </div>
                                             </div>
 
