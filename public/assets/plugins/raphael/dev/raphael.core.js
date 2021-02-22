@@ -23,12 +23,12 @@ define(["eve"], function(eve) {
      - all (array) (first 3 or 4 elements in the array are equal to [containerID, width, height] or [x, y, width, height]. The rest are element descriptions in format {type: type, <attributes>}). See @Paper.add.
      - callback (function) #optional callback function which is going to be executed in the context of newly created paper
      * or
-     - onReadyCallback (function) function that is going to be called on DOM ready event. You can also subscribe to this event via Eve's "DOMLoad" event. In this case method returns `undefined`.
+     - onReadyCallback (function) function that is going to be called on DOM ready event. You can also subscribe to this event via Eve’s “DOMLoad” event. In this case method returns `undefined`.
      = (object) @Paper
      > Usage
      | // Each of the following examples create a canvas
      | // that is 320px wide by 200px high.
-     | // Canvas is created at the viewport's 10,50 coordinate.
+     | // Canvas is created at the viewport’s 10,50 coordinate.
      | var paper = Raphael(10, 50, 320, 200);
      | // Canvas is created at the top left corner of the #notepad element
      | // (or its top right corner in dir="rtl" elements)
@@ -101,7 +101,7 @@ define(["eve"], function(eve) {
              |     num = num % 1;
              |     return {fill: "hsb(" + num + ", 0.75, 1)"};
              | };
-             | // Custom attribute "hue" will change fill
+             | // Custom attribute “hue” will change fill
              | // to be given hue with fixed saturation and brightness.
              | // Now you can use it like this:
              | var c = paper.circle(10, 10, 10).attr({hue: .45});
@@ -313,7 +313,7 @@ define(["eve"], function(eve) {
      * Raphael.type
      [ property (string) ]
      **
-     * Can be "SVG", "VML" or empty, depending on browser support.
+     * Can be “SVG”, “VML” or empty, depending on browser support.
     \*/
     R.type = (g.win.SVGAngle || g.doc.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#BasicStructure", "1.1") ? "SVG" : "VML");
     if (R.type == "VML") {
@@ -376,7 +376,7 @@ define(["eve"], function(eve) {
      * Handful of replacements for `typeof` operator.
      > Parameters
      - o (…) any object or primitive
-     - type (string) name of the type, i.e. "string", "function", "number", etc.
+     - type (string) name of the type, i.e. “string”, “function”, “number”, etc.
      = (boolean) is given value is of given type
     \*/
     R.is = function (o, type) {
@@ -611,7 +611,7 @@ define(["eve"], function(eve) {
      o     g (number) green,
      o     b (number) blue,
      o     hex (string) color in HTML/CSS format: #••••••,
-     o     error (boolean) `true` if string can't be parsed,
+     o     error (boolean) `true` if string can’t be parsed,
      o     h (number) hue,
      o     s (number) saturation,
      o     v (number) value (brightness),
@@ -853,12 +853,12 @@ define(["eve"], function(eve) {
      > Parameters
      - colour (string) colour string in one of formats:
      # <ul>
-     #     <li>Colour name ("<code>red</code>", "<code>green</code>", "<code>cornflowerblue</code>", etc)</li>
-     #     <li>#••• — shortened HTML colour: ("<code>#000</code>", "<code>#fc0</code>", etc)</li>
-     #     <li>#•••••• — full length HTML colour: ("<code>#000000</code>", "<code>#bd2300</code>")</li>
-     #     <li>rgb(•••, •••, •••) — red, green and blue channels' values: ("<code>rgb(200,&nbsp;100,&nbsp;0)</code>")</li>
-     #     <li>rgb(•••%, •••%, •••%) — same as above, but in %: ("<code>rgb(100%,&nbsp;175%,&nbsp;0%)</code>")</li>
-     #     <li>hsb(•••, •••, •••) — hue, saturation and brightness values: ("<code>hsb(0.5,&nbsp;0.25,&nbsp;1)</code>")</li>
+     #     <li>Colour name (“<code>red</code>”, “<code>green</code>”, “<code>cornflowerblue</code>”, etc)</li>
+     #     <li>#••• — shortened HTML colour: (“<code>#000</code>”, “<code>#fc0</code>”, etc)</li>
+     #     <li>#•••••• — full length HTML colour: (“<code>#000000</code>”, “<code>#bd2300</code>”)</li>
+     #     <li>rgb(•••, •••, •••) — red, green and blue channels’ values: (“<code>rgb(200,&nbsp;100,&nbsp;0)</code>”)</li>
+     #     <li>rgb(•••%, •••%, •••%) — same as above, but in %: (“<code>rgb(100%,&nbsp;175%,&nbsp;0%)</code>”)</li>
+     #     <li>hsb(•••, •••, •••) — hue, saturation and brightness values: (“<code>hsb(0.5,&nbsp;0.25,&nbsp;1)</code>”)</li>
      #     <li>hsb(•••%, •••%, •••%) — same as above, but in %</li>
      #     <li>hsl(•••, •••, •••) — same as hsb</li>
      #     <li>hsl(•••%, •••%, •••%) — same as hsb</li>
@@ -869,7 +869,7 @@ define(["eve"], function(eve) {
      o     g (number) green,
      o     b (number) blue
      o     hex (string) color in HTML/CSS format: #••••••,
-     o     error (boolean) true if string can't be parsed
+     o     error (boolean) true if string can’t be parsed
      o }
     \*/
     R.getRGB = cacher(function (colour) {
@@ -2823,7 +2823,7 @@ define(["eve"], function(eve) {
      **
      * You can add your own method to elements. This is useful when you want to hack default functionality or
      * want to wrap some common transformation or attributes in one method. In difference to canvas methods,
-     * you can redefine element method at any time. Expending element methods wouldn't affect set.
+     * you can redefine element method at any time. Expending element methods wouldn’t affect set.
      > Usage
      | Raphael.el.red = function () {
      |     this.attr({fill: "#f00"});
@@ -3267,7 +3267,7 @@ define(["eve"], function(eve) {
      - x (number) x coordinate of the centre
      - y (number) y coordinate of the centre
      - r (number) radius
-     = (object) Raphaël element object with type "circle"
+     = (object) Raphaël element object with type “circle”
      **
      > Usage
      | var c = paper.circle(50, 50, 40);
@@ -3290,7 +3290,7 @@ define(["eve"], function(eve) {
      - width (number) width
      - height (number) height
      - r (number) #optional radius for rounded corners, default is 0
-     = (object) Raphaël element object with type "rect"
+     = (object) Raphaël element object with type “rect”
      **
      > Usage
      | // regular rectangle
@@ -3315,7 +3315,7 @@ define(["eve"], function(eve) {
      - y (number) y coordinate of the centre
      - rx (number) horizontal radius
      - ry (number) vertical radius
-     = (object) Raphaël element object with type "ellipse"
+     = (object) Raphaël element object with type “ellipse”
      **
      > Usage
      | var c = paper.ellipse(50, 50, 40, 20);
@@ -3334,7 +3334,7 @@ define(["eve"], function(eve) {
      - pathString (string) #optional path string in SVG format.
      * Path string consists of one-letter commands, followed by comma seprarated arguments in numercal form. Example:
      | "M10,20L30,40"
-     * Here we can see two commands: "M", with arguments `(10, 20)` and "L" with arguments `(30, 40)`. Upper case letter mean command is absolute, lower case—relative.
+     * Here we can see two commands: “M”, with arguments `(10, 20)` and “L” with arguments `(30, 40)`. Upper case letter mean command is absolute, lower case—relative.
      *
      # <p>Here is short list of commands available, for more details see <a href="http://www.w3.org/TR/SVG/paths.html#PathData" title="Details of a path's data attribute's format are described in the SVG specification.">SVG path string format</a>.</p>
      # <table><thead><tr><th>Command</th><th>Name</th><th>Parameters</th></tr></thead><tbody>
@@ -3349,8 +3349,8 @@ define(["eve"], function(eve) {
      # <tr><td>T</td><td>smooth quadratic Bézier curveto</td><td>(x y)+</td></tr>
      # <tr><td>A</td><td>elliptical arc</td><td>(rx ry x-axis-rotation large-arc-flag sweep-flag x y)+</td></tr>
      # <tr><td>R</td><td><a href="http://en.wikipedia.org/wiki/Catmull–Rom_spline#Catmull.E2.80.93Rom_spline">Catmull-Rom curveto</a>*</td><td>x1 y1 (x y)+</td></tr></tbody></table>
-     * * "Catmull-Rom curveto" is a not standard SVG command and added in 2.0 to make life easier.
-     * Note: there is a special case when path consist of just three commands: "M10,10R…z". In this case path will smoothly connects to its beginning.
+     * * “Catmull-Rom curveto” is a not standard SVG command and added in 2.0 to make life easier.
+     * Note: there is a special case when path consist of just three commands: “M10,10R…z”. In this case path will smoothly connects to its beginning.
      > Usage
      | var c = paper.path("M10 10L90 90");
      | // draw a diagonal line:
@@ -3376,7 +3376,7 @@ define(["eve"], function(eve) {
      - y (number) y coordinate position
      - width (number) width of the image
      - height (number) height of the image
-     = (object) Raphaël element object with type "image"
+     = (object) Raphaël element object with type “image”
      **
      > Usage
      | var c = paper.image("apple.png", 10, 10, 80, 80);
@@ -3390,14 +3390,14 @@ define(["eve"], function(eve) {
      * Paper.text
      [ method ]
      **
-     * Draws a text string. If you need line breaks, put "\n" in the string.
+     * Draws a text string. If you need line breaks, put “\n” in the string.
      **
      > Parameters
      **
      - x (number) x coordinate position
      - y (number) y coordinate position
      - text (string) The text string to draw
-     = (object) Raphaël element object with type "text"
+     = (object) Raphaël element object with type “text”
      **
      > Usage
      | var t = paper.text(50, 50, "Raphaël\nkicks\nbutt!");
@@ -3412,7 +3412,7 @@ define(["eve"], function(eve) {
      [ method ]
      **
      * Creates array-like object to keep and operate several elements at once.
-     * Warning: it doesn't create any elements for itself in the page, it just groups existing elements.
+     * Warning: it doesn’t create any elements for itself in the page, it just groups existing elements.
      * Sets act as pseudo elements — all methods available to an element can be used on a set.
      = (object) array-like object that represents set of elements
      **
@@ -3683,7 +3683,7 @@ define(["eve"], function(eve) {
      * Element.isPointInside
      [ method ]
      **
-     * Determine if given point is inside this element's shape
+     * Determine if given point is inside this element’s shape
      **
      > Parameters
      **
@@ -3763,7 +3763,7 @@ define(["eve"], function(eve) {
      **
      * Return set of elements that create glow-like effect around given element. See @Paper.set.
      *
-     * Note: Glow is not connected to the element. If you change element attributes it won't adjust itself.
+     * Note: Glow is not connected to the element. If you change element attributes it won’t adjust itself.
      **
      > Parameters
      **
@@ -3917,7 +3917,7 @@ define(["eve"], function(eve) {
      * Element.getTotalLength
      [ method ]
      **
-     * Returns length of the path in pixels. Only works for element of "path" type.
+     * Returns length of the path in pixels. Only works for element of “path” type.
      = (number) length.
     \*/
     elproto.getTotalLength = function () {
@@ -3936,7 +3936,7 @@ define(["eve"], function(eve) {
      * Element.getPointAtLength
      [ method ]
      **
-     * Return coordinates of the point located at the given length on the given path. Only works for element of "path" type.
+     * Return coordinates of the point located at the given length on the given path. Only works for element of “path” type.
      **
      > Parameters
      **
@@ -3961,7 +3961,7 @@ define(["eve"], function(eve) {
      * Element.getPath
      [ method ]
      **
-     * Returns path of the element. Only works for elements of "path" type and simple elements like circle.
+     * Returns path of the element. Only works for elements of “path” type and simple elements like circle.
      = (object) path
      **
     \*/
@@ -3983,7 +3983,7 @@ define(["eve"], function(eve) {
      * Element.getSubpath
      [ method ]
      **
-     * Return subpath of a given element from given length to given length. Only works for element of "path" type.
+     * Return subpath of a given element from given length to given length. Only works for element of “path” type.
      **
      > Parameters
      **
@@ -4006,14 +4006,14 @@ define(["eve"], function(eve) {
      **
      * Object that contains easing formulas for animation. You could extend it with your own. By default it has following list of easing:
      # <ul>
-     #     <li>"linear"</li>
-     #     <li>"&lt;" or "easeIn" or "ease-in"</li>
-     #     <li>">" or "easeOut" or "ease-out"</li>
-     #     <li>"&lt;>" or "easeInOut" or "ease-in-out"</li>
-     #     <li>"backIn" or "back-in"</li>
-     #     <li>"backOut" or "back-out"</li>
-     #     <li>"elastic"</li>
-     #     <li>"bounce"</li>
+     #     <li>“linear”</li>
+     #     <li>“&lt;” or “easeIn” or “ease-in”</li>
+     #     <li>“>” or “easeOut” or “ease-out”</li>
+     #     <li>“&lt;>” or “easeInOut” or “ease-in-out”</li>
+     #     <li>“backIn” or “back-in”</li>
+     #     <li>“backOut” or “back-out”</li>
+     #     <li>“elastic”</li>
+     #     <li>“bounce”</li>
      # </ul>
      # <p>See also <a href="http://raphaeljs.com/easing.html">Easing demo</a>.</p>
     \*/
@@ -5042,7 +5042,7 @@ define(["eve"], function(eve) {
      * Set.isPointInside
      [ method ]
      **
-     * Determine if given point is inside this set's elements
+     * Determine if given point is inside this set’s elements
      **
      > Parameters
      **
@@ -5065,7 +5065,7 @@ define(["eve"], function(eve) {
      * Raphael.registerFont
      [ method ]
      **
-     * Adds given font to the registered set of fonts for Raphaël. Should be used as an internal call from within Cufón's font file.
+     * Adds given font to the registered set of fonts for Raphaël. Should be used as an internal call from within Cufón’s font file.
      * Returns original parameter, so it could be used with chaining.
      # <a href="http://wiki.github.com/sorccu/cufon/about">More about Cufón and how to convert your font form TTF, OTF, etc to JavaScript file.</a>
      **
@@ -5119,7 +5119,7 @@ define(["eve"], function(eve) {
      * Paper.getFont
      [ method ]
      **
-     * Finds font object in the registered fonts by given parameters. You could specify only one word from the font name, like "Myriad" for "Myriad Pro".
+     * Finds font object in the registered fonts by given parameters. You could specify only one word from the font name, like “Myriad” for “Myriad Pro”.
      **
      > Parameters
      **
@@ -5266,7 +5266,7 @@ define(["eve"], function(eve) {
      * Raphael.format
      [ method ]
      **
-     * Simple format function. Replaces construction of type "`{<number>}`" to the corresponding argument.
+     * Simple format function. Replaces construction of type “`{<number>}`” to the corresponding argument.
      **
      > Parameters
      **
@@ -5292,7 +5292,7 @@ define(["eve"], function(eve) {
      * Raphael.fullfill
      [ method ]
      **
-     * A little bit more advanced format function than @Raphael.format. Replaces construction of type "`{<name>}`" to the corresponding argument.
+     * A little bit more advanced format function than @Raphael.format. Replaces construction of type “`{<name>}`” to the corresponding argument.
      **
      > Parameters
      **

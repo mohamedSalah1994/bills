@@ -1417,7 +1417,7 @@ var requirejs, require, define;
 
                         requireMod = getModule(makeModuleMap(null, relMap));
 
-                        //StoreRequest if map config should be applied to this require
+                        //Store if map config should be applied to this require
                         //call for dependencies.
                         requireMod.skipMap = options.skipMap;
 

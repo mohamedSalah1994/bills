@@ -8,6 +8,7 @@ use App\Http\Controllers\billsController;
 use App\Http\Controllers\BillsDetailsController;
 use App\Http\Controllers\SectionController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ReportsController;
 use App\Http\Controllers\UserManagement\RoleController;
 use App\Http\Controllers\UserManagement\UserController;
 use Illuminate\Support\Facades\Auth;
@@ -56,6 +57,12 @@ Route::get('/partial_bills', [billsController::class , 'partial_bills'])->name('
 Route::get('/print_bills/{id}', [billsController::class , 'print_bill'])->name('print_bills');
 // ------------------------------------------------------------------------------------------------------
 Route::get('export_bills', [billsController::class , 'export'])->name('export_bills');
+// ------------------------------------------------------------------------------------------------------
+Route::get('/bill_report', [ReportsController::class , 'bills'])->name('bill_report');
+Route::post('/Search_bills', [ReportsController::class , 'Search_bills'])->name('Search_bills');
+Route::get('/customer_report', [ReportsController::class , 'customers'])->name('customer_report');
+Route::post('/search_customers', [ReportsController::class , 'search_customers'])->name('search_customers');
+
 // ------------------------------------------------------------------------------------------------------
 
 //Route::get('/{page}', [AdminController::class ,'index']);

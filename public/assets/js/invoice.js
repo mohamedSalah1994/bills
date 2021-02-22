@@ -1,12 +1,12 @@
 $(function() {
 	'use strict'
-	new PerfectScrollbar('#mainbillList', {
+	new PerfectScrollbar('#mainInvoiceList', {
 		suppressScrollX: true
 	});
-	new PerfectScrollbar('.main-content-body-bill', {
+	new PerfectScrollbar('.main-content-body-invoice', {
 		suppressScrollX: true
 	});
-	$('#mainbillList .media').on('click', function(e) {
+	$('#mainInvoiceList .media').on('click', function(e) {
 		$(this).addClass('selected');
 		$(this).siblings().removeClass('selected');
 		$('body').addClass('main-content-body-show');

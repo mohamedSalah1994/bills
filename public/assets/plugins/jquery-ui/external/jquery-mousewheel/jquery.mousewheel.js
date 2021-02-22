@@ -42,7 +42,7 @@
             } else {
                 this.onmousewheel = handler;
             }
-            // StoreRequest the line height and page height for this particular element
+            // Store the line height and page height for this particular element
             $.data(this, 'mousewheel-line-height', special.getLineHeight(this));
             $.data(this, 'mousewheel-page-height', special.getPageHeight(this));
         },
@@ -147,7 +147,7 @@
             deltaX *= pageHeight;
         }
 
-        // StoreRequest lowest absolute delta to normalize the delta values
+        // Store lowest absolute delta to normalize the delta values
         absDelta = Math.max( Math.abs(deltaY), Math.abs(deltaX) );
 
         if ( !lowestDelta || absDelta < lowestDelta ) {

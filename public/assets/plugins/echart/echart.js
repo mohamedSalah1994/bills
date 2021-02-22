@@ -11224,8 +11224,8 @@ function quantityExponent(val) {
 }
 
 /**
- * find a "nice" number approximately equal to x. Round the number if round = true,
- * take ceiling if round = false. The primary observation is that the "nicest"
+ * find a “nice” number approximately equal to x. Round the number if round = true,
+ * take ceiling if round = false. The primary observation is that the “nicest”
  * numbers in decimal are 1, 2, and 5, and all power-of-ten multiples of these numbers.
  *
  * See "Nice Numbers for Graph Labels" of Graphic Gems.
@@ -23371,7 +23371,7 @@ listProto.initData = function (data, nameList, dimValueGetter) {
         // only gives the 'y' value. 'x' value is the indices of cateogry
         // Use a tempValue to normalize the value to be a (x, y) value
 
-        // StoreRequest the data by dimensions
+        // Store the data by dimensions
         for (var k = 0; k < dimensions.length; k++) {
             var dim = dimensions[k];
             var dimStorage = storage[dim];
@@ -37794,7 +37794,7 @@ function nextLeft(node) {
 }
 
 /**
- * If nodeInLeft's ancestor is a sibling of node, returns nodeInLeft's ancestor.
+ * If nodeInLeft’s ancestor is a sibling of node, returns nodeInLeft’s ancestor.
  * Otherwise, returns the specified ancestor.
  * @param  {module:echarts/data/Tree~TreeNode} nodeInLeft
  * @param  {module:echarts/data/Tree~TreeNode} node
@@ -74188,7 +74188,7 @@ GradientManager.prototype.updateDom = function (gradient, dom) {
         dom.appendChild(stop);
     }
 
-    // StoreRequest dom element in gradient, to avoid creating multiple
+    // Store dom element in gradient, to avoid creating multiple
     // dom instances for the same gradient element
     gradient._dom = dom;
 };
@@ -74312,7 +74312,7 @@ ClippathManager.prototype.updateDom = function (
              * transform, which is done by multiplying parent's inverse
              * transform.
              */
-            // StoreRequest old transform
+            // Store old transform
             var transform = Array.prototype.slice.call(
                 clipPath.transform
             );

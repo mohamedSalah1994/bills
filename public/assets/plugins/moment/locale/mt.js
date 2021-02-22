@@ -31,7 +31,7 @@
             sameElse : 'L'
         },
         relativeTime : {
-            future : 'f' %s',
+            future : 'f’ %s',
             past : '%s ilu',
             s : 'ftit sekondi',
             ss : '%d sekondi',

@@ -1569,10 +1569,10 @@ readers do not read off random characters that represent icons */
 .fa-file-import:before {
   content: "\f56f"; }
 
-.fa-file-bill:before {
+.fa-file-invoice:before {
   content: "\f570"; }
 
-.fa-file-bill-dollar:before {
+.fa-file-invoice-dollar:before {
   content: "\f571"; }
 
 .fa-file-medical:before {

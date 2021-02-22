@@ -6790,7 +6790,7 @@ function defaultPrefilter( elem, props, opts ) {
 				dataShow = dataPriv.access( elem, "fxshow", { display: restoreDisplay } );
 			}
 
-			// StoreRequest hidden/visible for toggle so `.stop().toggle()` "reverses"
+			// Store hidden/visible for toggle so `.stop().toggle()` "reverses"
 			if ( toggle ) {
 				dataShow.hidden = !hidden;
 			}
@@ -7684,7 +7684,7 @@ jQuery.fn.extend( {
 				className = getClass( this );
 				if ( className ) {
 
-					// StoreRequest className if set
+					// Store className if set
 					dataPriv.set( this, "__className__", className );
 				}
 

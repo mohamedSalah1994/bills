@@ -64,7 +64,7 @@ $.widget( "ui.droppable", {
 		this.proportions = function( /* valueToWrite */ ) {
 			if ( arguments.length ) {
 
-				// StoreRequest the droppable's proportions
+				// Store the droppable's proportions
 				proportions = arguments[ 0 ];
 			} else {
 

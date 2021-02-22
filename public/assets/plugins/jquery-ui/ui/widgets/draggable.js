@@ -183,7 +183,7 @@ $.widget( "ui.draggable", $.ui.mouse, {
 		//Cache the margins of the original element
 		this._cacheMargins();
 
-		//StoreRequest the helper's css position
+		//Store the helper's css position
 		this.cssPosition = this.helper.css( "position" );
 		this.scrollParent = this.helper.scrollParent( true );
 		this.offsetParent = this.helper.offsetParent();
@@ -868,14 +868,14 @@ $.ui.plugin.add( "draggable", "connectToSortable", {
 				if ( !sortable.isOver ) {
 					sortable.isOver = 1;
 
-					// StoreRequest draggable's parent in case we need to reappend to it later.
+					// Store draggable's parent in case we need to reappend to it later.
 					draggable._parent = ui.helper.parent();
 
 					sortable.currentItem = ui.helper
 						.appendTo( sortable.element )
 						.data( "ui-sortable-item", true );
 
-					// StoreRequest helper option to later restore it
+					// Store helper option to later restore it
 					sortable.options._helper = sortable.options.helper;
 
 					sortable.options.helper = function() {

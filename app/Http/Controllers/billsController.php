@@ -251,11 +251,11 @@ class billsController extends Controller
         return view('bills.paid_bills' , compact('bills'));
     }
     public function unpaid_bills(){
-        $bills = Bill::where('value_status' , 1)->get();
+        $bills = Bill::where('value_status' , 2)->get();
         return view('bills.unpaid_bills' , compact('bills'));
     }
     public function partial_bills(){
-        $bills = Bill::where('value_status' , 1)->get();
+        $bills = Bill::where('value_status' , 3)->get();
         return view('bills.partial_bills' , compact('bills'));
     }
     public function Print_bill($id)

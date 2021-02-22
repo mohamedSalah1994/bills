@@ -995,7 +995,7 @@ if ( $.uiBackCompat !== false ) {
 						padding: 0
 					} ),
 
-				// StoreRequest the size in case width/height are defined in % - Fixes #5245
+				// Store the size in case width/height are defined in % - Fixes #5245
 				size = {
 					width: element.width(),
 					height: element.height()

@@ -50,7 +50,7 @@ License        :   Licensed under ThemeForest License
 36. Chat
 37 Contacts
 38. Error
-39. bill
+39. Invoice
 40. Mail
 41. Profile
 42. Background
@@ -82,8 +82,8 @@ License        :   Licensed under ThemeForest License
 */
 /* ######## FONT ######## */
 /* ############### FONTS IMPORT ############### */
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900");
-@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap');
 /* ######## BOOTSTRAP ######## */
 /*Color variables*/
 /*gray variables*/
@@ -91,7 +91,7 @@ License        :   Licensed under ThemeForest License
 /*black variables*/
 /*shadow variables*/
 html {
-  font-family: sans-serif;
+  font-family: 'Cairo', sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
@@ -101,13 +101,15 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'Cairo', sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.5;
   color: #031b4e;
   text-align: right;
-  background-color: #ecf0fa; }
+  background-color: #ecf0fa;
+
+}
 
 [tabindex="-1"]:focus {
   outline: 0 !important; }
@@ -119,10 +121,12 @@ hr {
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
+  font-family: 'Cairo', sans-serif;
   margin-bottom: 0.5rem; }
 
 p {
   margin-top: 0;
+  font-family: 'Cairo', sans-serif;
   margin-bottom: 1rem; }
 
 abbr[title], abbr[data-original-title] {
@@ -139,6 +143,7 @@ address {
 
 ol, ul, dl {
   margin-top: 0;
+  font-family: 'Cairo', sans-serif;
   margin-bottom: 1rem; }
 
 ol ol, ul ul, ol ul, ul ol {
@@ -155,6 +160,7 @@ blockquote {
   margin: 0 0 1rem; }
 
 b, strong {
+  font-family: 'Cairo', sans-serif;
   font-weight: bolder; }
 
 small {
@@ -174,6 +180,7 @@ sup {
 
 a {
   color: #0162e8;
+  font-family: 'Cairo', sans-serif;
   text-decoration: none;
   background-color: transparent; }
   a:hover {
@@ -221,13 +228,16 @@ caption {
   caption-side: bottom; }
 
 th {
+  font-family: 'Cairo', sans-serif;
   text-align: inherit; }
 
 label {
+  font-family: 'Cairo', sans-serif;
   display: inline-block;
   margin-bottom: 0.5rem; }
 
 button {
+  font-family: 'Cairo', sans-serif;
   border-radius: 0; }
   button:focus {
     outline: 1px dotted;
@@ -246,6 +256,7 @@ button {
   text-transform: none; }
 
 select {
+  font-family: 'Cairo', sans-serif;
   text-transform: none;
   word-wrap: normal; }
 
@@ -267,6 +278,7 @@ input[type="date"], input[type="time"], input[type="datetime-local"], input[type
   -webkit-appearance: listbox; }
 
 textarea {
+  font-family: 'Cairo', sans-serif;
   overflow: auto;
   resize: vertical; }
 
@@ -317,6 +329,7 @@ template {
   display: none !important; }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'Cairo', sans-serif;
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2; }
@@ -331,6 +344,7 @@ h3, .h3 {
   font-size: 1.53125rem; }
 
 h4, .h4 {
+  font-family: 'Cairo', sans-serif;
   font-size: 1.3125rem; }
 
 h5, .h5 {
@@ -10179,7 +10193,7 @@ a.close.disabled {
 /* ############### PAGE LAYOUT STYLES ############### */
 /* ###### 6.3 Global  ###### */
 body {
-  font-family: 'Cairo', sans-serif; }
+    font-family: 'Cairo', sans-serif; }
 
 .main-body, .main-dashboard {
   min-height: 100vh;
@@ -25570,112 +25584,112 @@ input.parsley-error:focus, textarea.parsley-error:focus, input.parsley-success:f
     height: 30%;
     width: 30%; } }
 
-/* ###### 7.5 bill  ###### */
-.main-content-left-bill {
+/* ###### 7.5 Invoice  ###### */
+.main-content-left-invoice {
   display: block;
   padding: 0; }
-  .main-content-left-bill .main-content-breadcrumb, .main-content-left-bill .main-content-title {
+  .main-content-left-invoice .main-content-breadcrumb, .main-content-left-invoice .main-content-title {
     padding-left: 20px; }
 
 @media (max-width: 991.98px) {
-  .main-content-left-bill {
+  .main-content-left-invoice {
     width: 100%; } }
 
 @media (min-width: 992px) {
-  .main-content-left-bill {
+  .main-content-left-invoice {
     border-right: 1px solid #e3e8f7; } }
 
 @media (min-width: 992px) {
-  .main-content-left-bill .main-content-breadcrumb, .main-content-left-bill .main-content-title {
+  .main-content-left-invoice .main-content-breadcrumb, .main-content-left-invoice .main-content-title {
     padding-left: 0; } }
 
-.main-bill-list {
+.main-invoice-list {
   position: relative;
   border-top: 1px solid #e3e8f7; }
-  .main-bill-list .media {
+  .main-invoice-list .media {
     align-items: center;
     border: 1px solid transparent;
     border-right-width: 0;
     padding: 10px 20px;
     position: relative; }
-    .main-bill-list .media:hover, .main-bill-list .media:focus {
+    .main-invoice-list .media:hover, .main-invoice-list .media:focus {
       cursor: pointer;
       background-color: #ecf0fa; }
-    .main-bill-list .media + .media {
+    .main-invoice-list .media + .media {
       margin-top: -1px; }
-      .main-bill-list .media + .media::before {
+      .main-invoice-list .media + .media::before {
         content: '';
         position: absolute;
         top: -1px;
         left: 55px;
         right: 0;
         border-top: 1px dotted #d0d7e8; }
-  .main-bill-list .media-icon {
+  .main-invoice-list .media-icon {
     width: 24px;
     text-align: center;
     font-size: 32px;
     color: #949eb7; }
-  .main-bill-list .media-body {
+  .main-invoice-list .media-body {
     margin-left: 15px; }
-    .main-bill-list .media-body h6 {
+    .main-invoice-list .media-body h6 {
       font-weight: 500;
       color: #242f48;
       margin-bottom: 3px;
       display: flex;
       align-items: center;
       justify-content: space-between; }
-      .main-bill-list .media-body h6 span:last-child {
+      .main-invoice-list .media-body h6 span:last-child {
         color: #0162e8; }
-    .main-bill-list .media-body div {
+    .main-invoice-list .media-body div {
       display: flex;
       justify-content: space-between;
       align-items: center; }
-    .main-bill-list .media-body p {
+    .main-invoice-list .media-body p {
       margin-bottom: 0;
       font-size: 11px;
       font-family: Arial, sans-serif;
       color: #364261; }
-      .main-bill-list .media-body p span {
+      .main-invoice-list .media-body p span {
         color: #737f9e; }
-  .main-bill-list .selected {
+  .main-invoice-list .selected {
     background-color: #ecf0fa;
     border-top-color: #e3e8f7;
     border-bottom-color: #e3e8f7;
     border-left-color: #0162e8; }
-    .main-bill-list .selected:first-child {
+    .main-invoice-list .selected:first-child {
       border-top-color: transparent; }
 
-.card-bill hr {
+.card-invoice hr {
   border-top: 0 !important; }
 
 @media (min-width: 992px) {
-  .main-bill-list {
+  .main-invoice-list {
     height: calc(100% - 65px); } }
 
 @media (min-width: 992px) {
-  .main-bill-list .media {
+  .main-invoice-list .media {
     padding: 10px 15px; } }
 
-.main-content-body-bill {
+.main-content-body-invoice {
   position: relative; }
 
 @media (min-width: 992px) {
-  .main-content-body-bill {
+  .main-content-body-invoice {
     display: block; } }
 
-.card-bill {
+.card-invoice {
   background-color: transparent;
   border-width: 0; }
-  .card-bill .card-body {
+  .card-invoice .card-body {
     padding: 20px; }
 
 @media (min-width: 768px) {
-  .bill-header {
+  .invoice-header {
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse; } }
 
-.bill-title {
+.invoice-title {
   margin-bottom: 0;
   text-transform: uppercase;
   color: #d0d7e8;
@@ -25705,38 +25719,38 @@ input.parsley-error:focus, textarea.parsley-error:focus, input.parsley-success:f
   font-size: 13px;
   margin-bottom: 0; }
 
-.bill-info-row {
+.invoice-info-row {
   display: flex;
   justify-content: space-between;
   padding: 5px 0;
   margin-bottom: 0;
   font-size: 13px; }
-  .bill-info-row + .bill-info-row {
+  .invoice-info-row + .invoice-info-row {
     border-top: 1px dotted #d0d7e8; }
-  .bill-info-row span:first-child {
+  .invoice-info-row span:first-child {
     color: #4d5875; }
 
-.table-bill thead > tr > th, .table-bill thead > tr > td {
+.table-invoice thead > tr > th, .table-invoice thead > tr > td {
   font-size: 11px;
   font-weight: 700;
   color: #737f9e; }
 
-.table-bill tbody > tr > th:first-child, .table-bill tbody > tr > td:first-child {
+.table-invoice tbody > tr > th:first-child, .table-invoice tbody > tr > td:first-child {
   color: #242f48;
   font-weight: 500; }
 
-.table-bill tbody > tr > th:first-child .bill-notes, .table-bill tbody > tr > td:first-child .bill-notes {
+.table-invoice tbody > tr > th:first-child .invoice-notes, .table-invoice tbody > tr > td:first-child .invoice-notes {
   margin-right: 20px; }
 
-.table-bill tbody > tr > th:first-child .bill-notes .section-label-sm, .table-bill tbody > tr > td:first-child .bill-notes .section-label-sm {
+.table-invoice tbody > tr > th:first-child .invoice-notes .section-label-sm, .table-invoice tbody > tr > td:first-child .invoice-notes .section-label-sm {
   font-weight: 600; }
 
-.table-bill tbody > tr > th:first-child .bill-notes p, .table-bill tbody > tr > td:first-child .bill-notes p {
+.table-invoice tbody > tr > th:first-child .invoice-notes p, .table-invoice tbody > tr > td:first-child .invoice-notes p {
   font-size: 13px;
   font-weight: 400;
   color: #031b4e; }
 
-.table-bill.table thead th, .table-bill.table thead td {
+.table-invoice.table thead th, .table-invoice.table thead td {
   padding: 9px 15px; }
 
 /* ###### 7.6 Mail  ###### */
@@ -52542,6 +52556,13 @@ a.text-dark:hover, a.text-dark:focus {
     width: auto !important; } }
 
 .wd-100v {
-  width: 100vw; }
+  width: 100vw;
+
+.card,.ht-40,.justify-content-between,.row-sm,.sidebar-scroll,.nav-item
+{font-family: 'Cairo', sans-serif;}
+
+
+
+
 
 /*# sourceMappingURL=style.css.map */

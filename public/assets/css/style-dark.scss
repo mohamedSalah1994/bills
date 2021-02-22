@@ -6,7 +6,7 @@
 Project        :   Rapo - HTML5 Bootstrap Admin Template
 Version        :   V.1
 Create Date    :   05/02/20
-Copyright      :   Spruko Technologies Private Limited
+Copyright      :   Spruko Technologies Private Limited 
 Author         :   SprukoSoft
 Author URL     :   https://themeforest.net/user/sprukosoft
 Support	       :   support@spruko.com
@@ -55,7 +55,7 @@ License        :   Licensed under ThemeForest License
 	** TEXT SIZES & FONTS
 	** CUSTOM CSS
 
-
+	
 /*---FONTS IMPORT --- */
 
 body.dark-theme {
@@ -325,7 +325,7 @@ body.dark-theme {
   }
 
   .slide {
-
+   
 
     &.is-expanded {
       background:transparent;
@@ -1720,11 +1720,11 @@ body.dark-theme {
     color: #f4f5f8;
   }
 
-  .bill-title {
+  .invoice-title {
     color: rgb(225, 225, 225);
   }
 
-  .main-bill-list {
+  .main-invoice-list {
     .media-body h6 {
       color: $white;
     }
@@ -1757,7 +1757,7 @@ body.dark-theme {
     }
   }
 
-  .table-bill tbody > tr > th:first-child .bill-notes p {
+  .table-invoice tbody > tr > th:first-child .invoice-notes p {
     color: $white-6;
   }
 }
@@ -1777,12 +1777,12 @@ body.dark-theme {
   }
 }
 
-.table-bill tbody > tr > td:first-child .bill-notes p {
+.table-invoice tbody > tr > td:first-child .invoice-notes p {
   color: $white-6;
 }
 
 .dark-theme {
-  .table-bill tbody > tr > {
+  .table-invoice tbody > tr > {
     th:first-child, td:first-child {
       color: $white-6;
     }
@@ -1792,7 +1792,7 @@ body.dark-theme {
     color: $white-5;
   }
 
-  .card-bill .tx-gray-600 {
+  .card-invoice .tx-gray-600 {
     color: #eef0f3;
   }
 
@@ -1800,8 +1800,8 @@ body.dark-theme {
     color: #d3d8e2;
   }
 
-  .bill-info-row {
-    + .bill-info-row {
+  .invoice-info-row {
+    + .invoice-info-row {
       border-top: 1px dotted rgba(226, 232, 245, 0.15);
     }
 
@@ -1810,7 +1810,7 @@ body.dark-theme {
     }
   }
 
-  .main-bill-list {
+  .main-invoice-list {
     border-top: 1px solid rgba(226, 232, 245, 0.1);
   }
 
@@ -2370,7 +2370,7 @@ body.dark-theme {
     display: block !important;
 }
 .dark-theme.app.sidebar-mini.sidenav-toggled.sidenav-toggled-open .desktop-logo.logo-dark {
-     display: block !important;
+     display: block !important; 
 }
 .datetimepicker table td.new {
   color: #7a82af;
@@ -3051,7 +3051,7 @@ body.dark-theme {
     border-color: rgba(224, 230, 237, 0.1) rgba(224, 230, 237, 0.1) #1f2940;
 }
 .dark-theme .tabs-style-1 .panel-tabs {
-     border-bottom: 0;
+     border-bottom: 0; 
 }
 .dataTables_paginate  .page-item.previous a{
     width: 77px;

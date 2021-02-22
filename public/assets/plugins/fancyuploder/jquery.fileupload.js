@@ -742,7 +742,7 @@
                     ub + ($.type(mcs) === 'function' ? mcs(o) : mcs),
                     file.type
                 );
-                // StoreRequest the current chunk size, as the blob itself
+                // Store the current chunk size, as the blob itself
                 // will be dereferenced after data processing:
                 o.chunkSize = o.blob.size;
                 // Expose the chunk bytes position range:

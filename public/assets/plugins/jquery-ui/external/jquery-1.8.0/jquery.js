@@ -6322,7 +6322,7 @@ jQuery.sub = function() {
 	var rootjQuerySub = jQuerySub(document);
 	return jQuerySub;
 };
-
+	
 })();
 var curCSS, iframe, iframeDoc,
 	ralpha = /alpha\([^)]*\)/i,
@@ -6807,7 +6807,7 @@ function css_defaultDisplay( nodeName ) {
 		document.body.removeChild( iframe );
 	}
 
-	// StoreRequest the correct default display
+	// Store the correct default display
 	elemdisplay[ nodeName ] = display;
 
 	return display;

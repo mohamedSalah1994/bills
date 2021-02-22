@@ -319,7 +319,7 @@ var _ = _self.Prism = {
 
 				pattern = pattern.pattern || pattern;
 
-				// Don't cache length as it changes during the loop
+				// Don’t cache length as it changes during the loop
 				for (var i = index, pos = startPos; i < strarr.length; pos += strarr[i].length, ++i) {
 
 					var str = strarr[i];

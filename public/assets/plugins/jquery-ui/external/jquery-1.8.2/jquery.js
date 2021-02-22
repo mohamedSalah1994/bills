@@ -7010,7 +7010,7 @@ function css_defaultDisplay( nodeName ) {
 		document.body.removeChild( iframe );
 	}
 
-	// StoreRequest the correct default display
+	// Store the correct default display
 	elemdisplay[ nodeName ] = display;
 
 	return display;

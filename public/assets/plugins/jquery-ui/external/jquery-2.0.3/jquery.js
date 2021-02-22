@@ -6496,7 +6496,7 @@ function css_defaultDisplay( nodeName ) {
 			iframe.detach();
 		}
 
-		// StoreRequest the correct default display
+		// Store the correct default display
 		elemdisplay[ nodeName ] = display;
 	}
 

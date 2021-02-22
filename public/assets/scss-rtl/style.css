@@ -4,7 +4,7 @@
 Project        :   VALEX - HTML5 Bootstrap Admin Template
 Version        :   V.1
 Create Date    :   09/05/20
-Copyright      :   Spruko Technologies Private Limited
+Copyright      :   Spruko Technologies Private Limited 
 Author         :   SprukoSoft
 Author URL     :   https://themeforest.net/user/sprukosoft
 Support	       :   support@spruko.com
@@ -50,7 +50,7 @@ License        :   Licensed under ThemeForest License
 36. Chat
 37 Contacts
 38. Error
-39. bill
+39. Invoice
 40. Mail
 41. Profile
 42. Background
@@ -37398,40 +37398,40 @@ input.parsley-error:focus, textarea.parsley-error:focus, input.parsley-success:f
   }
 }
 
-/* ###### 7.5 bill  ###### */
-.main-content-left-bill {
+/* ###### 7.5 Invoice  ###### */
+.main-content-left-invoice {
   display: block;
   padding: 0;
 }
 
-.main-content-left-bill .main-content-breadcrumb, .main-content-left-bill .main-content-title {
+.main-content-left-invoice .main-content-breadcrumb, .main-content-left-invoice .main-content-title {
   padding-left: 20px;
 }
 
 @media (max-width: 991.98px) {
-  .main-content-left-bill {
+  .main-content-left-invoice {
     width: 100%;
   }
 }
 
 @media (min-width: 992px) {
-  .main-content-left-bill {
+  .main-content-left-invoice {
     border-right: 1px solid #e3e8f7;
   }
 }
 
 @media (min-width: 992px) {
-  .main-content-left-bill .main-content-breadcrumb, .main-content-left-bill .main-content-title {
+  .main-content-left-invoice .main-content-breadcrumb, .main-content-left-invoice .main-content-title {
     padding-left: 0;
   }
 }
 
-.main-bill-list {
+.main-invoice-list {
   position: relative;
   border-top: 1px solid #e3e8f7;
 }
 
-.main-bill-list .media {
+.main-invoice-list .media {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -37441,16 +37441,16 @@ input.parsley-error:focus, textarea.parsley-error:focus, input.parsley-success:f
   position: relative;
 }
 
-.main-bill-list .media:hover, .main-bill-list .media:focus {
+.main-invoice-list .media:hover, .main-invoice-list .media:focus {
   cursor: pointer;
   background-color: #ecf0fa;
 }
 
-.main-bill-list .media + .media {
+.main-invoice-list .media + .media {
   margin-top: -1px;
 }
 
-.main-bill-list .media + .media::before {
+.main-invoice-list .media + .media::before {
   content: '';
   position: absolute;
   top: -1px;
@@ -37459,18 +37459,18 @@ input.parsley-error:focus, textarea.parsley-error:focus, input.parsley-success:f
   border-top: 1px dotted #d0d7e8;
 }
 
-.main-bill-list .media-icon {
+.main-invoice-list .media-icon {
   width: 24px;
   text-align: center;
   font-size: 32px;
   color: #949eb7;
 }
 
-.main-bill-list .media-body {
+.main-invoice-list .media-body {
   margin-left: 15px;
 }
 
-.main-bill-list .media-body h6 {
+.main-invoice-list .media-body h6 {
   font-weight: 500;
   color: #242f48;
   margin-bottom: 3px;
@@ -37485,11 +37485,11 @@ input.parsley-error:focus, textarea.parsley-error:focus, input.parsley-success:f
           justify-content: space-between;
 }
 
-.main-bill-list .media-body h6 span:last-child {
+.main-invoice-list .media-body h6 span:last-child {
   color: #0162e8;
 }
 
-.main-bill-list .media-body div {
+.main-invoice-list .media-body div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -37501,65 +37501,65 @@ input.parsley-error:focus, textarea.parsley-error:focus, input.parsley-success:f
           align-items: center;
 }
 
-.main-bill-list .media-body p {
+.main-invoice-list .media-body p {
   margin-bottom: 0;
   font-size: 11px;
   font-family: Arial, sans-serif;
   color: #364261;
 }
 
-.main-bill-list .media-body p span {
+.main-invoice-list .media-body p span {
   color: #737f9e;
 }
 
-.main-bill-list .selected {
+.main-invoice-list .selected {
   background-color: #ecf0fa;
   border-top-color: #e3e8f7;
   border-bottom-color: #e3e8f7;
   border-left-color: #0162e8;
 }
 
-.main-bill-list .selected:first-child {
+.main-invoice-list .selected:first-child {
   border-top-color: transparent;
 }
 
-.card-bill hr {
+.card-invoice hr {
   border-top: 0 !important;
 }
 
 @media (min-width: 992px) {
-  .main-bill-list {
+  .main-invoice-list {
     height: calc(100% - 65px);
   }
 }
 
 @media (min-width: 992px) {
-  .main-bill-list .media {
+  .main-invoice-list .media {
     padding: 10px 15px;
   }
 }
 
-.main-content-body-bill {
+.main-content-body-invoice {
   position: relative;
 }
 
 @media (min-width: 992px) {
-  .main-content-body-bill {
+  .main-content-body-invoice {
     display: block;
   }
 }
 
-.card-bill {
+.card-invoice {
   background-color: transparent;
   border-width: 0;
 }
 
-.card-bill .card-body {
+.card-invoice .card-body {
   padding: 20px;
 }
 
 @media (min-width: 768px) {
-  .bill-header {
+  .invoice-header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -37573,7 +37573,7 @@ input.parsley-error:focus, textarea.parsley-error:focus, input.parsley-success:f
   }
 }
 
-.bill-title {
+.invoice-title {
   margin-bottom: 0;
   text-transform: uppercase;
   color: #d0d7e8;
@@ -37613,7 +37613,7 @@ input.parsley-error:focus, textarea.parsley-error:focus, input.parsley-success:f
   margin-bottom: 0;
 }
 
-.bill-info-row {
+.invoice-info-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -37625,40 +37625,40 @@ input.parsley-error:focus, textarea.parsley-error:focus, input.parsley-success:f
   font-size: 13px;
 }
 
-.bill-info-row + .bill-info-row {
+.invoice-info-row + .invoice-info-row {
   border-top: 1px dotted #d0d7e8;
 }
 
-.bill-info-row span:first-child {
+.invoice-info-row span:first-child {
   color: #4d5875;
 }
 
-.table-bill thead > tr > th, .table-bill thead > tr > td {
+.table-invoice thead > tr > th, .table-invoice thead > tr > td {
   font-size: 11px;
   font-weight: 700;
   color: #737f9e;
 }
 
-.table-bill tbody > tr > th:first-child, .table-bill tbody > tr > td:first-child {
+.table-invoice tbody > tr > th:first-child, .table-invoice tbody > tr > td:first-child {
   color: #242f48;
   font-weight: 500;
 }
 
-.table-bill tbody > tr > th:first-child .bill-notes, .table-bill tbody > tr > td:first-child .bill-notes {
+.table-invoice tbody > tr > th:first-child .invoice-notes, .table-invoice tbody > tr > td:first-child .invoice-notes {
   margin-right: 20px;
 }
 
-.table-bill tbody > tr > th:first-child .bill-notes .section-label-sm, .table-bill tbody > tr > td:first-child .bill-notes .section-label-sm {
+.table-invoice tbody > tr > th:first-child .invoice-notes .section-label-sm, .table-invoice tbody > tr > td:first-child .invoice-notes .section-label-sm {
   font-weight: 600;
 }
 
-.table-bill tbody > tr > th:first-child .bill-notes p, .table-bill tbody > tr > td:first-child .bill-notes p {
+.table-invoice tbody > tr > th:first-child .invoice-notes p, .table-invoice tbody > tr > td:first-child .invoice-notes p {
   font-size: 13px;
   font-weight: 400;
   color: #031b4e;
 }
 
-.table-bill.table thead th, .table-bill.table thead td {
+.table-invoice.table thead th, .table-invoice.table thead td {
   padding: 9px 15px;
 }
 
