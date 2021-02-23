@@ -8,6 +8,7 @@ use App\Models\Bills_attachments;
 use App\Models\Bills_details;
 use App\Models\Section;
 use App\Models\User;
+use App\Notifications\Bill_add;
 use App\Notifications\BillPaid;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -91,17 +92,21 @@ class billsController extends Controller
             $attachments->bill_id = $bill_id;
             $attachments->save();
 
-            // move pic
+             // move pic
             $imageName = $request->pic->getClientOriginalName();
             $request->pic->move(public_path('Attachments/' . $bill_number), $imageName);
-
-
         }
-        // send mail
-        $user = User::first();
-        Notification::send($user, new BillPaid($bill_id));
-        session()->flash('Add', 'تم اضافة الفاتورة بنجاح');
-        return back();
+             // send mail
+            $user = User::first();
+            Notification::send($user, new BillPaid($bill_id));
+            // send notification
+            $user = User::get();
+            $bills = Bill::latest()->first();
+            Notification::send($user, new Bill_add($bills));
+
+
+            session()->flash('Add', 'تم اضافة الفاتورة بنجاح');
+            return back();
     }
 
     /**
@@ -268,4 +273,15 @@ class billsController extends Controller
 
         return Excel::download(new BillsExport, 'bills.xlsx');
     }
+    public function MarkAsRead_all (Request $request)
+    {
+
+        $userUnreadNotification= auth()->user()->unreadNotifications;
+
+        if($userUnreadNotification) {
+            $userUnreadNotification->markAsRead();
+            return back();
+        }
+    }
+    
 }

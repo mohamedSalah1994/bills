@@ -60,7 +60,7 @@ class HomeController extends Controller
             ->name('barChartTest')
             ->type('bar')
             ->size(['width' => 350, 'height' => 200])
-            ->labels(['الفواتير الغير المدفوعة', 'الفواتير المدفوعة','الفواتير المدفوعة جزئيا'])
+            ->labels([' الغير المدفوعة', ' المدفوعة',' المدفوعة جزئيا'])
             ->datasets([
                 [
                     "label" => "الفواتير الغير المدفوعة",

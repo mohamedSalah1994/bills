@@ -55,6 +55,8 @@ Route::get('/paid_bills', [billsController::class , 'paid_bills'])->name('paid_b
 Route::get('/unpaid_bills', [billsController::class , 'unpaid_bills'])->name('unpaid_bills');
 Route::get('/partial_bills', [billsController::class , 'partial_bills'])->name('partial_bills');
 Route::get('/print_bills/{id}', [billsController::class , 'print_bill'])->name('print_bills');
+Route::get('/MarkAsRead_all',[billsController::class ,'MarkAsRead_all'])->name('MarkAsRead_all');
+
 // ------------------------------------------------------------------------------------------------------
 Route::get('export_bills', [billsController::class , 'export'])->name('export_bills');
 // ------------------------------------------------------------------------------------------------------
